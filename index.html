@@ -86,9 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>因为想了解博客的访问量等运营数据，搜索了一下，发现了</p>
-<img src="/2020/06/07/themes/Hexo%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%AE%BF%E9%97%AE%E9%87%8F%E7%BB%9F%E8%AE%A1.png" class="" title="图片插入测试">
-<p> <a href="https://www.jianshu.com/p/c9f83d5b893a" target="_blank" rel="noopener">https://www.jianshu.com/p/c9f83d5b893a</a><br>随即发现了这个作者自己做的一个theme叫做yilia <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a><br>试用了下，感觉好像不错，然后发现Hexo其实提供了很多themes，模板默认的theme叫landscape<br>这是目前的一点发现，待我对theme有更多理解了，继续完善这篇</p>
+        <p>因为想了解博客的访问量等运营数据，搜索发现了简书文章【Hexo博客添加访问量统计】 <a href="https://www.jianshu.com/p/c9f83d5b893a" target="_blank" rel="noopener">https://www.jianshu.com/p/c9f83d5b893a</a><br>随即发现了这个作者自己做的一个Hexo的theme叫做yilia， <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus" target="_blank" rel="noopener">https://github.com/JoeyBling/hexo-theme-yilia-plus</a><br>试用了下，感觉不错，然后发现Hexo其实提供了很多themes，模板默认的theme叫landscape<br>这是目前的一点发现，待我对theme有更多理解了，继续完善这篇</p>
 
       
     </div>
@@ -131,15 +129,16 @@
 <li><p>新建博文<br>hexo new post “博文标题”</p>
 </li>
 <li><p>发布博文<br>hexo d -g</p>
-<img src="/2020/06/02/%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8A%9F%E8%83%BD/%E5%8F%91%E5%B8%83%E5%8D%9A%E6%96%87.png" class="" title="发布博文">
-<h2 id="二、博文编辑相关"><a href="#二、博文编辑相关" class="headerlink" title="二、博文编辑相关"></a>二、博文编辑相关</h2></li>
-<li><p>插入图片<br>我的方法是通过Hexo建立一个本地文章资源文件夹，将本地图片放入该文件夹中，再进行引用。<br>具体操作：<br>a) 找到_config.yml文件将其中writting部分的post_asset_folder值更改为true</p>
-<img src="/2020/06/02/%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8A%9F%E8%83%BD/%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="" title="建立本地资源文件夹">
-<p>b) 在博客正文中通过<br>更多内容可参考 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders</a></p>
 </li>
 </ol>
+<h2 id="二、博文编辑相关"><a href="#二、博文编辑相关" class="headerlink" title="二、博文编辑相关"></a>二、博文编辑相关</h2><ol>
+<li>插入图片<br>我的方法是通过Hexo建立一个本地文章资源文件夹，将本地图片放入该文件夹中，再进行引用。<br>具体操作：<br>a) 找到_config.yml文件将其中writting部分的post_asset_folder值更改为true。<img src="/2020/06/02/%E5%86%99%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%8A%9F%E8%83%BD/%E5%BB%BA%E7%AB%8B%E6%9C%AC%E5%9C%B0%E8%B5%84%E6%BA%90%E6%96%87%E4%BB%B6%E5%A4%B9.png" class="" title="建立本地资源文件夹">
+b) 在博客正文中通过下列语句实现图片的插入。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% asset_img 本地图片名称.jpg 图片注释 %&#125;</span><br></pre></td></tr></table></figure>
+更多内容可参考 <a href="https://hexo.io/zh-cn/docs/asset-folders" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/asset-folders</a></li>
+</ol>
 <ol start="2">
-<li>插入代码块<br>因为Hexo默认使用Markdown语法，所以直接用Markdown插入代码块的写法即可<br>更多内容可参考 <a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a></li>
+<li>插入代码块<br>因为Hexo默认使用Markdown语法，所以直接用Markdown插入代码块的写法即可。<br>Markdown中的写法如下图，开头的符号为反引号，一般在键盘的数字1左边，通过英文输入法输入即为反引号。
+更多内容可参考 <a href="https://www.runoob.com/markdown/md-tutorial.html" target="_blank" rel="noopener">https://www.runoob.com/markdown/md-tutorial.html</a></li>
 </ol>
 
       
