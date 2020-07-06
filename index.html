@@ -178,7 +178,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/07/05/%E5%BC%80%E9%80%9A%E8%AF%84%E8%AE%BA%E7%9A%84%E4%B8%80%E7%99%BE%E7%A7%8D%E9%94%99%E8%AF%AF/" target="_blank">开通评论的一百种错误</a>
+	  <a class="article-title" href="/2020/07/05/%E5%BC%80%E9%80%9A%E8%AF%84%E8%AE%BA%E7%9A%84%E4%B8%80%E7%99%BE%E7%A7%8D%E9%94%99%E8%AF%AF/" target="_blank">搭建博客过程中遇到的一百种小bug</a>
   
     </h1>
   
@@ -199,7 +199,12 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>想用gitment来做文章的评论系统<br>但是使用过程中磕磕绊绊，到现在（2020-07-05）我也还是没搞好它<br>先记录下</p>
+    <p>搭博客这种事情，一次就好是不可能好的！</p>
+<p>记录下搭建博客中遇到的一百种小bug</p>
+<p>目前的主题配方是yilia-plus，同样使用yilia主题的同学欢迎前来避坑！</p>
+<h1 id="一、所有文章不显示"><a href="#一、所有文章不显示" class="headerlink" title="一、所有文章不显示"></a>一、所有文章不显示</h1><p>这个的解决方案其实主题开发者有直接写在页面上了！相对好解决</p>
+<h1 id="二、分页显示出现乱码-amp-raquo"><a href="#二、分页显示出现乱码-amp-raquo" class="headerlink" title="二、分页显示出现乱码&amp;raquo"></a>二、分页显示出现乱码&amp;raquo</h1><p>尝试了修改文件编码、语言选项等各种方式，最后是下面这篇文章真正解决了我的问题<br><a href="https://blog.csdn.net/weixin_43807244/article/details/105341605" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43807244/article/details/105341605</a><br>感恩！</p>
+<h1 id="三、使用Gitment搞评论系统，遭遇N连杀"><a href="#三、使用Gitment搞评论系统，遭遇N连杀" class="headerlink" title="三、使用Gitment搞评论系统，遭遇N连杀"></a>三、使用Gitment搞评论系统，遭遇N连杀</h1><p>想用gitment来做文章的评论系统<br>但是使用过程中磕磕绊绊，到现在（2020-07-05）我也还是没搞好它<br>先记录下</p>
 <h2 id="1-Error-Not-Found"><a href="#1-Error-Not-Found" class="headerlink" title="1. Error: Not Found"></a>1. Error: Not Found</h2><p>owner或者repo配置错误了，注意名字和仓库名字的大小写。<br>检查了下，果然是名字写错了，解决√<br>搜索过程发现了这篇文章 <a href="https://www.jianshu.com/p/57afa4844aaa" target="_blank" rel="noopener">https://www.jianshu.com/p/57afa4844aaa</a><br>【Gitment评论功能接入踩坑教程】，很全面了！欢迎大家参考</p>
 <h2 id="2-object-ProgressEvent"><a href="#2-object-ProgressEvent" class="headerlink" title="2. [object ProgressEvent]"></a>2. [object ProgressEvent]</h2>
     
