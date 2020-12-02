@@ -18,7 +18,7 @@
 <meta property="og:description" content="搞博客这种事，一次就好，是不可能好的！记录下搭建博客中遇到的100种小Bug。目前的主题配方是yilia-plus，同样使用yilia主题的同学欢迎前来避坑！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-04T19:11:31.000Z">
-<meta property="article:modified_time" content="2020-07-09T18:29:53.583Z">
+<meta property="article:modified_time" content="2020-07-10T19:41:32.003Z">
 <meta property="article:author" content="Hunchide">
 <meta property="article:tag" content="搭建博客">
 <meta name="twitter:card" content="summary">
@@ -201,7 +201,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">333字</span>
+      <span class="post-count">376字</span>
     </span>
   </span>
 
@@ -224,7 +224,7 @@
     <p>搞博客这种事，一次就好，是不可能好的！<br>记录下搭建博客中遇到的100种小Bug。<br>目前的主题配方是yilia-plus，同样使用yilia主题的同学欢迎前来避坑！</p>
 <a id="more"></a>
 
-<h1 id="Bug-01：所有文章不显示"><a href="#Bug-01：所有文章不显示" class="headerlink" title="Bug 01：所有文章不显示"></a>Bug 01：所有文章不显示</h1><p>这个的解决方案其实主题开发者有直接写在页面上了！相对好解决。<br>在_config.yml文件中增加如下代码即可。</p>
+<h1 id="Bug-01：所有文章不显示"><a href="#Bug-01：所有文章不显示" class="headerlink" title="Bug 01：所有文章不显示"></a>Bug 01：所有文章不显示</h1><p>这个的解决方案其实主题开发者有直接写在页面上了！相对好解决。<br>1、请确保node版本大于6.2<br>2、在博客根目录（注意不是yilia-plus根目录）执行以下命令：<br>npm i hexo-generator-json-content –save<br>3、在博客根目录_config.yml文件中增加如下代码即可。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">jsonContent:</span><br><span class="line">  meta: false</span><br><span class="line">  pages: false</span><br><span class="line">  posts:</span><br><span class="line">    title: true</span><br><span class="line">    date: true</span><br><span class="line">    path: true</span><br><span class="line">    text: false</span><br><span class="line">    raw: false</span><br><span class="line">    content: false</span><br><span class="line">    slug: false</span><br><span class="line">    updated: false</span><br><span class="line">    comments: false</span><br><span class="line">    link: false</span><br><span class="line">    permalink: false</span><br><span class="line">    excerpt: false</span><br><span class="line">    categories: false</span><br><span class="line">    tags: true</span><br></pre></td></tr></table></figure>
 
 <h1 id="Bug-02：分页显示出现乱码-amp-raquo"><a href="#Bug-02：分页显示出现乱码-amp-raquo" class="headerlink" title="Bug 02：分页显示出现乱码&amp;raquo"></a>Bug 02：分页显示出现乱码&amp;raquo</h1><p>尝试了修改文件编码、语言选项等各种方式，最后是下面这篇文章真正解决了我的问题<br><a href="https://blog.csdn.net/weixin_43807244/article/details/105341605" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43807244/article/details/105341605</a><br>感恩！</p>
@@ -368,6 +368,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2020/12/02/%E5%A5%BD%E4%B9%85%E6%B2%A1%E7%99%BB%E5%BD%95%EF%BC%8C%E5%BF%98%E8%AE%B0%E6%80%8E%E4%B9%88%E5%9C%A8%E8%BF%99%E9%87%8C%E5%86%99%E4%B8%9C%E8%A5%BF%E4%BA%86%EF%BC%81%EF%BC%81%EF%BC%81/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          好久没登录，忘记怎么在这里写东西了！！！
+        
+      </div>
+    </a>
   
   
     <a href="/2020/06/18/%E5%8D%9A%E5%AE%A2%E6%B2%A1%E5%86%99%E5%87%A0%E7%AF%87%EF%BC%8C%E9%9C%80%E6%B1%82%E7%BC%BA%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A4%9A%E7%9A%84%E6%88%91%EF%BC%81/" id="article-nav-older" class="article-nav-link-wrap">
@@ -561,6 +570,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">办公协同</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">test</a>
               </li>
             
             <div class="clearfix"></div>
