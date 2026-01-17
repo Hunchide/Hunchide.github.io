@@ -106,7 +106,56 @@
               <article class="post-content mx-auto">
                 <h1 id="seo-header">零基础也可以用Hexo+Github搭建博客！</h1>
                 <div class="markdown-body">
-                  <p>面向新手的 Hexo + GitHub Pages 搭建指南，包含环境配置、初始化与发布流程。</p>
+                  <h2 id="准备环境"><a href="#准备环境" class="headerlink" title="准备环境"></a>准备环境</h2>
+                  <ol>
+                    <li>安装 Node.js（建议使用长期支持版 LTS）。</li>
+                    <li>安装 Git，并配置全局用户名与邮箱。</li>
+                    <li>注册 GitHub 账号，创建用户名同名的仓库：用户名.github.io。</li>
+                  </ol>
+                  <h2 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h2>
+                  <pre><code>npm install -g hexo-cli
+                  </code></pre>
+                  <h2 id="初始化博客"><a href="#初始化博客" class="headerlink" title="初始化博客"></a>初始化博客</h2>
+                  <pre><code>mkdir blog &amp;&amp; cd blog
+hexo init
+npm install
+                  </code></pre>
+                  <p>初始化完成后，目录中会包含常见结构：_config.yml、source、themes 等。</p>
+                  <h2 id="写第一篇文章"><a href="#写第一篇文章" class="headerlink" title="写第一篇文章"></a>写第一篇文章</h2>
+                  <pre><code>hexo new post &quot;Hello World&quot;
+                  </code></pre>
+                  <p>在 source/_posts 下会生成对应的 md 文件，编辑其中的正文与 front-matter（标题、日期、分类、标签等）。</p>
+                  <h2 id="本地预览与生成"><a href="#本地预览与生成" class="headerlink" title="本地预览与生成"></a>本地预览与生成</h2>
+                  <pre><code>hexo server    # 本地预览，默认 http://localhost:4000/
+hexo clean     # 清理旧构建
+hexo generate  # 生成静态文件
+                  </code></pre>
+                  <h2 id="部署到GitHub-Pages"><a href="#部署到GitHub-Pages" class="headerlink" title="部署到 GitHub Pages"></a>部署到 GitHub Pages</h2>
+                  <ol>
+                    <li>安装部署插件：</li>
+                  </ol>
+                  <pre><code>npm install hexo-deployer-git --save
+                  </code></pre>
+                  <ol start="2">
+                    <li>在根目录 _config.yml 配置部署信息：</li>
+                  </ol>
+                  <pre><code>deploy:
+  type: git
+  repo: https://github.com/&lt;用户名&gt;/&lt;用户名&gt;.github.io.git
+  branch: master
+                  </code></pre>
+                  <ol start="3">
+                    <li>执行部署：</li>
+                  </ol>
+                  <pre><code>hexo deploy
+                  </code></pre>
+                  <p>片刻后即可通过 https://&lt;用户名&gt;.github.io 访问站点。</p>
+                  <h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2>
+                  <ul>
+                    <li>部署失败：检查 deploy.repo、分支、Git 认证是否正确。</li>
+                    <li>页面空白或样式错乱：确认主题安装与 _config.yml root 设置；清理后重新生成。</li>
+                    <li>中文路径访问异常：建议启用永久链接配置，避免标题中的特殊字符影响路径。</li>
+                  </ul>
                 </div>
               </article>
             </div>
