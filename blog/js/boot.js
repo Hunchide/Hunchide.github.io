@@ -18,8 +18,5 @@ Fluid.boot.refresh = function() {
 };
 
 document.addEventListener('DOMContentLoaded', function() {
-  if (typeof CONFIG !== 'undefined' && CONFIG.lazyload && CONFIG.lazyload.enable) {
-    CONFIG.lazyload.loading_img = '/blog/img/loading.gif';
-  }
   Fluid.boot.registerEvents();
 });

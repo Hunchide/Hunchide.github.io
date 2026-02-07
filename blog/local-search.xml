@@ -11,12 +11,22 @@
     <content type="html"><![CDATA[<h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>如果我这里变更是可以直接显示在博客网站上么？</p>]]></content>
     
     
+    <categories>
+      
+      <category>搭建博客</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Hexo</tag>
+      
+      <tag>测试</tag>
+      
+    </tags>
     
   </entry>
-  
-  
-  
-
   
   
   
